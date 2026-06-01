@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra sua casa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+
+            <h1>Qual Casa de Westeros Combina com Você?</h1>
+
+                <input type="submit" value="Descobrir minha casa" id="botao" onclick="descobrir()">
+                <div id="res"></div>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <script>
+
+        function descobrir() {
+        var botao = document.getElementById('botao')    
+        var sorteio = Math.floor(Math.random() * 4)
+        var res = document.getElementById('res')
+        if (sorteio == 0) {
+        res.innerText = 'Você foi escolhida(o) para a Casa Stark!' }
+
+        else if (sorteio == 1) {
+            res.innerText = 'Você foi escolhida(o) para a Casa Tagaryen'
+        }
+
+        else if (sorteio == 2) {
+            res.innerText = 'Você foi escolhida(o) para a Casa Lannister'
+        }
+
+        else {
+            res.innerText = 'Você foi escolhida(o) para a Casa Baratheon'
+        }
+    }
+    </script>
+  
+</body>
+</html>
